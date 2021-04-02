@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+
+.eltdf-testimonials-holder {
+    
+    &.eltdf-testimonials-standard {
+        text-align: center;
+
+        .eltdf-testimonial-image {
+            @include eltdfRelativeHolderLayout();
+            margin: 25px 0 0;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .eltdf-testimonial-title {
+            margin: 0;
+        }
+
+        .eltdf-testimonial-author {
+            margin: 48px 0 0;
+        }
+
+        .eltdf-testimonial-text {
+            margin: 40px 0 0;
+            padding: 0 19%;
+
+            @include phone-landscape{
+                padding: 0;
+            }
+        }
+
+    }
+}
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */

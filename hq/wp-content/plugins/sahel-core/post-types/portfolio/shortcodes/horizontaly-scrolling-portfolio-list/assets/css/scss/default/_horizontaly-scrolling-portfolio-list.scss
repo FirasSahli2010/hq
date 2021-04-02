@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Horizontaly Scrolling Portfolio List shortcode style - begin
+   ========================================================================== */
+.eltdf-horizontaly-scrolling-portfolio-holder-outer{
+	padding: 0 110px;
+	box-sizing: border-box;
+}
+
+.eltdf-horizontaly-scrolling-portfolio-holder {
+    @include eltdfRelativeHolderLayout();
+
+	.eltdf-hspl-lines-holder{
+		@include eltdfAbsoluteHolderLayout();
+		overflow: hidden;
+
+		.eltdf-lines-col{
+			position: absolute;
+			top: 0;
+			height: 100vh;
+			border-right: 1px solid $header-border-color;
+
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i}) {
+					left:#{$i*20%}; 
+				}
+			}
+		}
+	}
+
+	.eltdf-hspl-inner{
+		display: flex;
+		height: 100vh;
+		visibility: hidden;
+		will-change: transform;
+
+		.touch & {
+			@include eltdfTransitionTransform(.5s);
+		}
+
+		&.eltdf-ready {
+			visibility: visible;
+
+			article {
+				opacity: 1;
+
+				@for $i from 1 through 6 {
+					&:nth-child(#{$i}) {
+						-webkit-transition-delay:(#{$i*0.1s}); 
+						transition-delay:(#{$i*0.1s});
+					}
+				}
+			}
+		}
+	}
+
+	/***** Article Global Style - begin *****/
+
+    article {
+		opacity: 0;
+		@include eltdfTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+
+		&.eltdf-hspl-featured {
+			align-self:center;
+		}
+
+		.eltdf-hspl-item-inner {
+			width: 100%;
+		}
+		
+		&:not(.eltdf-hspl-featured) {
+			&:nth-of-type(even) {
+				display: flex;
+				align-self: flex-start;
+				align-items: center;
+				height: 50%;
+
+				.eltdf-hspl-item-inner  {
+					margin-bottom: 20px;
+				}
+			}
+
+			&:nth-of-type(odd) {
+				display: flex;
+				align-self: flex-end;
+				align-items: center;
+				height: 50%;
+
+				.eltdf-hspl-item-inner  {
+					margin-top: 20px;
+				}
+			}
+		}
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+
+		.eltdf-hspl-item-holder-inner{
+			position: relative;
+		}
+
+		&.eltdf-hspl-featured {
+			.eltdf-hspl-item-holder-inner{
+				width: 75%;
+				text-align: right;
+			}
+
+			.eltdf-hspli-text{
+				padding-top: 22px;
+			}
+
+			.eltdf-hspli-category-holder {
+				margin: 0 0 1px;
+			}
+
+			.eltdf-hspli-title {
+				display: inline;
+				@include eltdfUnderline($speed: .3s);
+			}
+
+			.eltdf-hspl-item-holder-inner:hover {
+				.eltdf-hspli-title {
+					background-size: 100% 100%;
+				}
+			}
+		}
+		    
+		img {
+			display: block;
+		}
+
+	    .eltdf-hspli-link {
+		    @include eltdfAbsoluteHolderLayout();
+	    }
+
+	    .eltdf-hspli-text-wrapper {
+	        @include eltdfTableLayout();
+	    }
+
+	    .eltdf-hspli-text {
+		    @include eltdfTableCellLayout();
+
+		    .eltdf-hspli-title {
+				margin: 0;
+		    }
+	    }
+
+		.eltdf-hspli-category-side-holder{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			@include eltdfTransform(rotate(-90deg) translateX(-20px));
+			@include eltdfTransformOrigin(bottom left);
+			white-space: nowrap;
+
+			.eltdf-hspli-category-holder:after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: calc(100% + 10px);
+				width: 33px;
+				height: 1px;
+				background-color: currentColor;
+			}
+		}
+
+		.eltdf-hspli-category-holder {
+			position: relative;
+			display: block;
+			margin: 0 0 19px;
+
+			.eltdf-hspli-category-name{
+				margin: 0;
+			}
+
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 6px 0 0;
+				margin: 0 3px 0 0;
+				z-index: 8;
+
+				&:after {
+					position: absolute;
+					top: 0;
+					right: -4px;
+					content: '/';
+					color: inherit;
+					font-size: 12px;
+					line-height: inherit;
+				}
+
+				&:last-child {
+					margin: 0;
+					padding: 0;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&:not(.eltdf-hspl-featured) {
+			.eltdf-hspl-item-title-holder {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-sizing: border-box;
+				padding: 20px;
+				text-align: center;
+				background-color: rgba(0,0,0,.4);
+				opacity: 0;
+				@include eltdfTransition(opacity .4s);
+	
+				.eltdf-hspli-title {
+					color :#fff;
+				}
+			}
+
+			&:hover {
+				.eltdf-hspl-item-title-holder {
+					opacity: 1;
+				}
+			}
+		}
+    }
+
+	/***** Article Global Style - end *****/
+
+}
+/* ==========================================================================
+   Horizontaly Scrolling Portfolio List shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Interactive link showcase shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+	.eltdf-sig-holder {
+
+		.eltdf-sig-info {
+
+			.eltdf-sig-headline {
+				margin: 14.35% 0 11.8%;
+			}
+		}
+		
+	}
+}
+
+@include laptop-landscape-mac {
+
+	.eltdf-sig-holder {
+		
+		.eltdf-sig-image-holder {
+			bottom: 2%;
+			right: 0;
+		}
+	}
+
+}
+
+@include ipad-landscape {
+
+
+	.eltdf-sig-holder {
+		.eltdf-sig-image-holder,
+		.eltdf-sig-info {
+			width: 50%;
+			box-sizing: border-box;
+		}
+		.eltdf-sig-info {
+
+			.eltdf-sig-headline {
+				width: 96%;
+			}
+			.eltdf-sig-thumbnails-holder {
+				.eltdf-sig-thumbnail {
+					width: 45%;
+					box-sizing: border-box;
+				}
+			}
+		}
+		.eltdf-sig-image-holder {
+			bottom: 2%;
+		}
+	}
+}
+
+@include ipad-portrait {
+
+	.eltdf-sig-holder {
+		.eltdf-sig-image-holder,
+		.eltdf-sig-info {
+			position: relative;
+			width: 100%;
+			padding-right: 0;
+		}
+		.eltdf-sig-info {
+			float: none;
+			.eltdf-sig-thumbnails-holder{
+				padding: 0;
+
+				.eltdf-sig-thumbnail{
+					width: 45%;
+					.eltdf-sig-inner{
+						display: block;
+					}
+
+					img{
+						width: 100%;
+					}
+
+				}
+
+			}
+		}
+		.eltdf-sig-image-holder {
+			bottom: 8px;
+			right: 0;
+			left: 0;
+			margin: 40px 0 0;
+		}
+	}
+
+}
+
+/* ==========================================================================
+   Interactive link showcase shortcode responsive style - end
+   ========================================================================== */

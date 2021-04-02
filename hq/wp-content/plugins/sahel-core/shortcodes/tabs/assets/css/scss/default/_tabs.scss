@@ -1,0 +1,264 @@
+/* ==========================================================================
+   Tabs shortcode style - begin
+   ========================================================================== */
+
+.eltdf-tabs {
+	@include eltdfRelativeHolderLayout();
+
+	.eltdf-tabs-nav {
+		@include eltdfRelativeHolderLayout();
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			float: left;
+			margin: 0;
+			padding: 0;
+
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				box-sizing: border-box;
+				@include eltdfTransition(color .2s ease-out, background-color .2s ease-out, border-color .2s ease-out);
+			}
+		}
+	}
+
+	.eltdf-tab-container {
+		box-sizing: border-box;
+		@include eltdfRelativeHolderLayout();
+
+		p {
+			margin: 0;
+		}
+	}
+
+	&.eltdf-tabs-standard {
+
+		.eltdf-tabs-nav {
+
+			li {
+				margin-right: 53px;
+
+				a {
+					padding: 11px 16px;
+					font-family: $default-text-font;
+					font-size: 11px;
+					line-height: 25px;
+					font-weight: 400;
+					text-transform: uppercase;
+					letter-spacing: 0.3em;
+					color: $default-heading-color;
+				}
+
+				&.ui-state-active {
+
+					border-bottom: 1px solid $first-main-color;
+
+				}
+			}
+		}
+
+		.eltdf-tab-container {
+			margin: 36px 0 0;
+		}
+	}
+
+	&.eltdf-tabs-boxed {
+
+		.eltdf-tabs-nav {
+
+			font-size: 0px !important;
+
+			li {
+				border: 1px solid $default-heading-color;
+				margin-right: -1px;
+
+				a {
+					padding: 11px 50px;
+					font-family: $default-text-font;
+					font-size: 11px;
+					line-height: 25px;
+					font-weight: 400;
+					text-transform: uppercase;
+					letter-spacing: 0.3em;
+					color: $default-heading-color;
+				}
+
+				&.ui-state-active a,
+				&.ui-state-hover a {
+					color: #fff;
+					background-color: $first-main-color;
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+
+		.eltdf-tab-container {
+			margin: 36px 0 0;
+		}
+	}
+
+	&.eltdf-tabs-simple {
+
+		.eltdf-tabs-nav {
+
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			clear: both;
+
+			li {
+				float: none;
+				display: inline-block;
+				margin: 0 52px 0 0;
+
+				a {
+					padding: 10px 15px;
+					font-family: $default-text-font;
+					color: $default-heading-color;
+					font-size: 11px;
+					line-height: 2.8em;
+					letter-spacing: 0.3em;
+					text-transform: uppercase;
+				}
+
+				&.ui-state-active a,
+				&.ui-state-hover a {
+					color: $default-heading-color;
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+
+				&:after {
+					content: '';
+					width: 100%;
+					height: 1px;
+					background-color: $default-heading-color;
+					opacity: 0;
+					display: block;
+				}
+
+				&.ui-tabs-active {
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+
+		}
+
+		.eltdf-tab-container {
+			margin: 0 -400px;
+			padding: 35px 400px 21px;
+			border-top: 1px solid #ece8e5;
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+			box-sizing: content-box;
+		}
+	}
+
+	&.eltdf-tabs-vertical {
+		display: table;
+
+		.eltdf-tabs-nav {
+			display: table-cell;
+			vertical-align: top;
+			width: 140px;
+			height: 100%;
+			border-right: 1px solid $default-border-color;
+			box-sizing: border-box;
+
+			li {
+				display: block;
+				float: none;
+				margin: 0 0 24px;
+
+				a {
+					font-family: $default-text-font;
+					font-size: 11px;
+					line-height: 25px;
+					font-weight: 400;
+					text-transform: uppercase;
+					letter-spacing: 0.3em;
+					color: $default-heading-color;
+				}
+
+				&.ui-state-active a,
+				&.ui-state-hover a {
+					color: $default-heading-color;
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+
+		.eltdf-tab-container {
+			display: table-cell;
+			vertical-align: top;
+			width: calc(100% - 140px);
+			height: 100%;
+			padding: 0 0 0 45px;
+			box-sizing: border-box;
+		}
+	}
+}
+
+.ui-widget-content {
+	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	border-radius: 0;
+
+	.ui-widget-header {
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+		color: initial;
+		background: none;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.ui-tabs-nav {
+
+		li {
+			position: initial;
+			font-weight: inherit;
+			color: inherit;
+			background: initial;
+			border: 0;
+			border-radius: 0;
+		}
+	}
+
+	.ui-widget-content {
+		color: inherit;
+		background: none;
+		border: 0;
+		border-radius: 0;
+	}
+}
+
+/* ==========================================================================
+   Tabs shortcode style - end
+   ========================================================================== */

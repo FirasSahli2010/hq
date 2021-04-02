@@ -1,0 +1,87 @@
+
+  /* ==========================================================================
+   Button shortcode responsive style - begin
+   ========================================================================== */
+
+   @include laptop-landscape-large {
+   	.eltdf-banner-holder {
+
+			padding: 59px 23px 18px;
+
+			.eltdf-banner-title {
+				font-size: 25px;
+			}
+			.eltdf-banner-subtitle {
+				font-size: 40px;
+			}
+		}
+	
+   }
+   @include laptop-landscape-mac {
+		.eltdf-banner-holder {
+
+			padding: 61px 35px 35px;
+
+			.eltdf-banner-title {
+				font-size: 25px;
+			}
+			.eltdf-banner-subtitle {
+				font-size: 40px;
+			}
+		}
+
+   }
+
+   @include ipad-landscape {
+	   	.eltdf-banner-holder {
+
+	   		padding: 50px 36px 18px;
+	   		.eltdf-banner-title {
+	   			font-size: 22px;
+	   		}
+	   		.eltdf-banner-subtitle {
+	   			font-size: 26px;
+	   		}
+	   	}
+   }
+    @include ipad-portrait {
+	   	.eltdf-banner-holder {
+	   		padding: 27px 22px 25px;
+	   		.eltdf-banner-title {
+	   			font-size: 22px;
+	   			margin: 20px 0 0;
+	   		}
+	   		.eltdf-banner-subtitle {
+	   			font-size: 26px;
+	   		}
+	   	}
+   }
+
+   @include phone-landscape {
+
+   		.eltdf-banner-holder {
+   			.eltdf-banner-text-holder {
+   				padding: 15px;
+   			}
+   		}
+   	;
+   	@include phone-portrait {
+   		.eltdf-banner-holder {
+   			.eltdf-banner-text-holder {
+   				padding: 10px;
+   			}
+   		}
+   		.eltdf-banner-holder {
+	   		.eltdf-banner-title {
+	   			font-size: 12px;
+	   		}
+	   		.eltdf-banner-subtitle {
+	   			font-size: 19px;
+	   		}
+	   	}
+   		}
+   }
+/* ==========================================================================
+   Button shortcode responsive style - end
+   ========================================================================== */
+

@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.eltdf-testimonials-holder {
+    @include eltdfRelativeHolderLayout();
+    
+    .eltdf-testimonials,
+    .eltdf-testimonial-content,
+    .eltdf-testimonial-text-holder {
+        @include eltdfRelativeHolderLayout();
+    }
+
+    .eltdf-testimonials {
+        padding: 0 50px;
+        box-sizing: border-box;
+
+        @include phone-landscape{
+            padding: 0 20px;
+        }
+    }
+
+    .eltdf-testimonial-image {
+
+        img {
+            width: auto !important;
+            border-radius: 5em;
+        }
+    }
+    .eltdf-testimonial-text-holder{
+        .eltdf-testimonials-separator{
+
+            position: relative;
+            display: inline-block;
+            margin: 0 0 57px;
+
+            .eltdf-testimonials-separator-line{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 107px;
+                height: 1px;
+                background: $first-main-color;
+                @include eltdfTransform(translateX(-50%) scaleX(0));
+                @include eltdfTransitionTransform(.5s);
+                @include eltdfTransformOrigin(0 50%);
+
+                &:last-child{
+                    top: 5px;
+                    left: calc(50% - -36px);
+                }
+            }
+        }
+        .eltdf-testimonial-text{
+            font-size: 18px;
+            line-height: 1.61em;
+            color: #676767;
+        }
+    }
+
+    .active .eltdf-testimonial-text-holder .eltdf-testimonials-separator .eltdf-testimonials-separator-line {
+        @include eltdfTransform(translateX(-50%) scaleX(1));    
+        @include eltdfTransitionTransform(.5s cubic-bezier(0.215, 0.61, 0.355, 1) .3s);
+        will-change: transform;
+
+        &:last-child {
+            @include eltdfTransitionTransform(.5s cubic-bezier(0.215, 0.61, 0.355, 1) .6s);
+        }
+    }
+
+    .owl-item > div {
+        @include eltdfTransform(translate3d(0,0,0));
+        @include eltdfTransition(.1s .1s);
+    }
+
+    .owl-item:not(.active) > div {
+        -webkit-filter: opacity(50%) grayscale(100%) contrast(0%);
+        filter: opacity(50%) grayscale(100%) contrast(0%);
+    }
+
+
+    .owl-nav{
+        .owl-prev,
+        .owl-next{
+            top: 50%;
+            bottom: auto;
+            background-color: transparent;
+
+            span{
+                font-size: 22px;
+                color: $default-heading-color;
+            }
+        }
+
+        .owl-prev{
+            left: 0;
+
+            @include phone-landscape{
+                left: -30px;
+            }
+
+        }
+        .owl-next{
+            right: 0;
+            left: auto;
+
+            @include phone-landscape{
+                right: -30px;
+            }
+        }
+
+    }
+    /* Light/Dark styles */
+    &.eltdf-testimonials-light {
+
+        .eltdf-testimonial-title,
+        .eltdf-testimonial-text,
+        .eltdf-testimonial-author {
+            color: #fff;
+        }
+
+        .owl-dots {
+
+            .owl-dot {
+
+                span {
+                    border: 2px solid rgba(#fff, .5);
+                }
+
+                &:hover,
+                &.active {
+
+                    span {
+                        background-color: #fff;
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+        .owl-nav{
+            .owl-prev,
+            .owl-next{
+                background-color: transparent;
+                span{
+                    color: #FFF;
+                }
+
+            }
+        }
+        .eltdf-testimonial-text-holder{
+            .eltdf-testimonials-separator{
+                .eltdf-testimonials-separator-line{
+                    background: #FFF;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */

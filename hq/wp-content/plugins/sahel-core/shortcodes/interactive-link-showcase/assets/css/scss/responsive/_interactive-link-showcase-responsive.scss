@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Interactive link showcase shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+	
+	.eltdf-ils-holder {
+		
+		.eltdf-ils-item-link {
+			font-size: 100px;
+		}
+
+		.eltdf-ils-image-holder{
+			width: 98%;
+		}
+	}
+}
+
+@include laptop-landscape-mac{
+	
+	.eltdf-ils-holder {
+		
+		.eltdf-ils-item-link {
+			font-size: 70px;
+			margin: 0 0 30px;
+		}
+
+		.eltdf-ils-image-holder{
+			width: 97.5%;
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.eltdf-ils-holder {
+		
+		.eltdf-ils-item-link {
+			font-size: 54px;
+		}
+		.eltdf-ils-image-holder{
+			width: 100%;
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.eltdf-ils-holder {
+		
+		.eltdf-ils-item-link {
+			font-size: 40px;
+			padding-right: 5%;
+			padding-left: 5%;
+		}
+	}
+}
+/* ==========================================================================
+   Interactive link showcase shortcode responsive style - end
+   ========================================================================== */

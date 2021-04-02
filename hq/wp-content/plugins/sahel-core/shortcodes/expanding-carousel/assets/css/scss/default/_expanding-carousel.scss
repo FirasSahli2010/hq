@@ -1,0 +1,284 @@
+/* ==========================================================================
+   Expanding Carousel shortcode style - begin
+   ========================================================================== */
+.eltdf-expanding-carousel-holder {
+	position: relative;
+	opacity: 0;
+	@include eltdfTransition(opacity .5s);
+
+	&.eltdf-animating{
+		pointer-events: none;
+	}
+
+	&.eltdf-expanding-fullscreen{
+		height: 100vh;
+		width: 100vw;
+	}
+
+	&.eltdf-expanding-landscape{
+		width: 100%;
+		padding-top: 67%;
+	}
+
+	&.eltdf-expanding-square{
+		width: 100%;
+		padding-top: 100%;
+	}
+
+	.eltdf-esc-outer-holder{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.eltdf-esc-prev-trigger,
+	.eltdf-esc-next-trigger {
+		position: absolute;
+		top:0;
+		height: 100%;
+		width: 5%;
+		min-width: 50px;
+		z-index: 200;
+		cursor: pointer;
+
+	}
+
+	.eltdf-esc-prev-trigger{
+		left: 0;
+	}
+
+	.eltdf-esc-next-trigger {
+		right: 0;
+	}
+
+	.eltdf-esc-item-text-holder-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.eltdf-esc-item-text-holder-table {
+			@include eltdfTableLayout();
+		}
+
+		.eltdf-esc-item-text-holder-cell {
+			@include eltdfTableCellLayout(bottom);
+		}
+
+		.eltdf-esc-item-title-holder{
+			height: 22%;
+			min-height: 150px;
+			font-size: 0;
+			padding: 50px 11%;
+			text-align: right;
+			box-sizing: border-box;
+
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 0;
+				height: 100%;
+			}
+		}
+	}
+	
+	.eltdf-esc-item-title {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 3.1vw;
+		line-height: 1em;
+		margin: 0;
+	}
+
+	.eltdf-esc-item-image {
+		position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: 100vw;
+	    height: 100%;
+	    background: no-repeat 50% 50%;
+	    background-size: cover;
+	}
+
+	.eltdf-esc-item {
+		.eltdf-esc-item-text-holder,
+		.eltdf-esc-item-image-holder {
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			@include eltdfTransition(left .7s cubic-bezier(.78,.11,0,.84), right .7s cubic-bezier(.78,.11,0,.84));
+		}
+
+		.eltdf-esc-item-text-holder {
+			z-index: 150;
+		}
+
+		.eltdf-esc-link{
+			@include eltdfAbsoluteHolderLayout();
+			z-index: 50;
+		}
+
+		&.eltdf-remove {
+			.eltdf-esc-item-text-holder,
+			.eltdf-esc-item-image-holder {
+				left: 0 !important;
+				right: 0 !important;
+				//@include eltdfTransition(all 1s);
+				z-index: 100 !important;
+			}
+		}
+
+		&.eltdf-prev {
+			.eltdf-esc-item-text-holder,
+			.eltdf-esc-item-image-holder{
+				left: 0;
+				right: 100%;
+				z-index: 120;
+				@include eltdfTransition(all 0s);
+			}
+
+			.eltdf-esc-item-image{
+				left: 0;
+				right: auto;
+			}
+
+			&.eltdf-active {
+				.eltdf-esc-item-text-holder,
+				.eltdf-esc-item-image-holder{
+					right: 0;
+				}
+			}
+		}
+
+		&.eltdf-active {
+			.eltdf-esc-item-text-holder {
+				z-index: 150;
+			}
+			.eltdf-esc-item-image-holder {
+				z-index: 110;
+			}
+		}	
+
+		&.eltdf-next {
+			.eltdf-esc-item-text-holder,
+			.eltdf-esc-item-image-holder{
+				left: 100%;
+				right: 0;
+				z-index: 120;
+				@include eltdfTransition(all 0s);
+			}
+
+			&.eltdf-active {
+				.eltdf-esc-item-text-holder,
+				.eltdf-esc-item-image-holder{
+					left: 0;
+				}
+			}
+		}
+
+		&:not(.eltdf-remove):not(.eltdf-active):not(.eltdf-next):not(.eltdf-prev) {
+			visibility: hidden;
+		}
+	}
+
+	&.eltdf-peek-prev {
+		.eltdf-esc-item {
+			&.eltdf-prev {
+				.eltdf-esc-item-text-holder,
+				.eltdf-esc-item-image-holder {
+					right: 90%;
+					@include eltdfTransition(all .5s);
+				}
+
+				&.eltdf-active {
+					.eltdf-esc-item-text-holder,
+					.eltdf-esc-item-image-holder {
+						right: 0;
+					}
+				}
+			}
+
+			&:not(.eltdf-prev):not(.eltdf-active):not(.eltdf-remove) {
+				.eltdf-esc-item-text-holder,
+				.eltdf-esc-item-image-holder {
+					@include eltdfTransition(all 0s);
+				}
+			}
+		}
+	}
+
+	&.eltdf-peek-next {
+		.eltdf-esc-item {
+			&.eltdf-next {
+				.eltdf-esc-item-text-holder,
+				.eltdf-esc-item-image-holder {
+					left: 90%;
+					@include eltdfTransition(all .5s);
+				}
+
+				&.eltdf-active {
+					.eltdf-esc-item-text-holder,
+					.eltdf-esc-item-image-holder {
+						left: 0;
+					}
+				}
+			}
+
+			&:not(.eltdf-next):not(.eltdf-active):not(.eltdf-remove) {
+				.eltdf-esc-item-text-holder,
+				.eltdf-esc-item-image-holder {
+					@include eltdfTransition(all 0s);
+				}
+			}
+		}
+	}
+
+
+	.eltdf-esc-nav{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 200;
+
+		.eltdf-esc-nav-prev,
+		.eltdf-esc-nav-next{
+			display: block;
+			width: 60px;
+			height: 60px;
+			color: #000;
+			font-size: 16px;
+			line-height: 60px;
+			background-color: #fff;
+			text-align: center;
+			cursor: pointer;
+
+			&:hover {
+				color: #6a6a6a;
+			}
+		}
+
+		.eltdf-esc-nav-next{
+			margin-top: 1px;
+		}
+	}
+
+	&.eltdf-esc-with-border{
+		.eltdf-esc-item-title-holder{
+			border-top: 1px solid $header-border-color;
+		}
+		.eltdf-esc-nav{
+			bottom: 22%; //needs to be the same as .eltdf-esc-item-title-holder
+			@include eltdfTransform(translateY(50%));
+		}
+	}
+}
+/* ==========================================================================
+   Expanding Carousel shortcode style - end
+   ========================================================================== */

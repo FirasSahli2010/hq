@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Scrolling Image shortcode style - begin
+   ========================================================================== */
+
+.eltdf-scrolling-image-holder {
+    display: inline-block;
+
+    &.eltdf-has-shadow {
+        .eltdf-si-inner {
+            box-shadow: 0px 0px 14.56px rgba(0, 0, 0, 0.03);
+        }
+    }
+
+    &.eltdf-scrolling-horizontal {
+        .eltdf-scrolling-image {
+            max-width: unset;
+        }
+    }
+    
+    .eltdf-si-inner {
+        position: relative;
+        vertical-align: middle;
+        overflow: hidden;
+
+        > a {
+            @include eltdfAbsoluteHolderLayout();
+            z-index: 100;
+        }
+    }
+
+    .eltdf-si-wrapper {
+        position: absolute;
+        left: 0;
+        top: 5.6%;
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+    img {
+        display: block;
+    }
+
+    .eltdf-scrolling-image {
+        will-change: transform;
+    }
+
+    .eltdf-si-text-holder {
+        text-align: center;
+    }
+
+    .eltdf-si-title > a {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 1px);
+            left: calc(100% - 12px);
+            width: 20px;
+            height: 1px;
+            background-color: currentColor;
+            opacity: 0;
+            @include eltdfTransform(translateX(16px));
+            @include eltdfTransitionTransform(.4s cubic-bezier(.13,.68,.05,.83), opacity .1s);
+        }
+
+        @at-root .eltdf-si-inner:hover ~ .eltdf-si-text-holder .eltdf-si-title > a:after,
+        &:hover:after {
+            opacity: 1;
+            @include eltdfTransform(translateX(0));
+        }
+    }
+    
+}
+/* ==========================================================================
+   Scrolling Image shortcode style - end
+   ========================================================================== */

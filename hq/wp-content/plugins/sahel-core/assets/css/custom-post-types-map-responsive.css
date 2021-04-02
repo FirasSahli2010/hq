@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+.eltdf-portfolio-single-holder .eltdf-ps-image-holder.eltdf-ps-gallery-images {
+  /***** Columns Layout - end *****/
+}
+
+@media only screen and (max-width: 680px) {
+  .eltdf-portfolio-single-holder .eltdf-ps-image-holder.eltdf-ps-gallery-images .eltdf-ps-image {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltdf-portfolio-single-holder .eltdf-ps-info-holder {
+    margin: 30px 0 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Horizontaly Scrolling Portfolio List shortcode style - begin
+   ========================================================================== */
+.eltdf-horizontaly-scrolling-portfolio-holder-outer {
+  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+  /* ----------- iPhone X ----------- */
+}
+
+@media only screen and (max-width: 1440px) {
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer article {
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-item-inner {
+    margin: 0 !important;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-lines-holder .eltdf-lines-col:nth-child(1) {
+    left: 0%;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-lines-holder .eltdf-lines-col:nth-child(2) {
+    left: 33%;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-lines-holder .eltdf-lines-col:nth-child(3) {
+    left: 66%;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-lines-holder .eltdf-lines-col:nth-child(4) {
+    left: 99%;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-lines-holder .eltdf-lines-col:nth-child(5) {
+    left: 132%;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3), only screen and (max-device-width: 600px) {
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer {
+    padding: 0 20px;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-item-inner {
+    height: auto;
+    width: 100%;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer article {
+    opacity: 1;
+    margin-right: 0;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer article.eltdf-hspl-featured .eltdf-hspl-item-holder-inner {
+    width: 100%;
+    text-align: center;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer article.eltdf-hspl-featured img {
+    margin: auto;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer article.eltdf-hspl-featured .eltdf-hspli-text {
+    padding: 22px 0;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer article:not(.eltdf-hspl-featured) {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+    margin-bottom: 40px;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-lines-holder {
+    display: none;
+  }
+  .eltdf-horizontaly-scrolling-portfolio-holder-outer .eltdf-hspl-inner {
+    visibility: visible;
+    display: block;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   Horizontaly Scrolling Portfolio List shortcode style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/sahel-core/assets/css/custom-post-types-map-responsive.css.map */

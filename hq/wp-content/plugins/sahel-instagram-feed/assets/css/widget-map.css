@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* ==========================================================================
+   Widgets styles
+   ========================================================================== */
+/* ==========================================================================
+   Instagram widget style - begin
+   ========================================================================== */
+aside.eltdf-sidebar .widget.widget_eltdf_instagram_widget .eltdf-widget-title,
+.wpb_widgetised_column .widget.widget_eltdf_instagram_widget .eltdf-widget-title {
+  margin: 0 0 25px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.eltdf-instagram-feed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eltdf-instagram-feed li {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none !important;
+}
+
+.eltdf-instagram-feed li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.eltdf-instagram-feed li a .eltdf-instagram-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 56px;
+  height: 53px;
+  color: #fff;
+  z-index: 1;
+}
+
+.eltdf-instagram-feed li a .eltdf-instagram-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.eltdf-instagram-feed li img {
+  width: 100%;
+  display: block;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-no-space {
+  margin: 0;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-no-space li {
+  padding: 0 0px;
+  margin: 0 0 0px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-tiny-space {
+  margin: 0 -5px -10px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-tiny-space li {
+  padding: 0 5px;
+  margin: 0 0 10px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-small-space {
+  margin: 0 -10px -20px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-small-space li {
+  padding: 0 10px;
+  margin: 0 0 20px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-normal-space {
+  margin: 0 -15px -30px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-normal-space li {
+  padding: 0 15px;
+  margin: 0 0 30px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-1 li {
+  width: 100%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-2 li {
+  width: 50%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-3 li {
+  width: 33.33333%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-4 li {
+  width: 25%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-6 li {
+  width: 16.66667%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-9 li {
+  width: 11.11111%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery li a .eltdf-instagram-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-transform: translate(-50%, -50%) translateZ(0);
+  transform: translate(-50%, -50%) translateZ(0);
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery li a .eltdf-instagram-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery li a:hover .eltdf-instagram-icon {
+  opacity: 1;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery li a:hover img {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  -webkit-transition: -webkit-transform all 0.2s ease-in-out;
+  transition: -webkit-transform all 0.2s ease-in-out;
+  -o-transition: transform all 0.2s ease-in-out;
+  transition: transform all 0.2s ease-in-out;
+  transition: transform all 0.2s ease-in-out, -webkit-transform all 0.2s ease-in-out;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery li img {
+  width: 100%;
+  display: block;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-carousel .owl-item li {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-carousel .owl-item li a {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-carousel .owl-item li a .eltdf-instagram-icon {
+  width: 56px;
+  height: 53px;
+  background-color: #FFF;
+  color: #000;
+}
+
+.eltdf-instagram-feed .eltdf-widget-title {
+  margin: 0 0 33px;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Instagram widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/sahel-instagram-feed/assets/css/widget-map.css.map */

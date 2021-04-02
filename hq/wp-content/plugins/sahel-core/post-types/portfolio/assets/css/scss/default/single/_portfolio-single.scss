@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-single-holder {
+	@include eltdfRelativeHolderLayout();
+	margin: 45px 0 50px;
+	
+    .eltdf-ps-image-holder {
+	    @include eltdfRelativeHolderLayout();
+	    
+	    .eltdf-ps-image {
+		    
+		    &:not(.eltdf-item-space) {
+			    @include eltdfRelativeHolderLayout();
+			    box-sizing: border-box;
+		    }
+		    
+		    a, img {
+			    position: relative;
+			    display: block;
+		    }
+	    }
+    }
+	
+	.eltdf-ps-info-holder {
+		@include eltdfRelativeHolderLayout();
+		
+		.eltdf-ps-info-item {
+			@include eltdfRelativeHolderLayout();
+			margin: 0 0 1px;
+			
+			p, a {
+				margin: 0;
+			}
+			.eltdf-ps-info-date {
+				display: inline-block;
+			}
+			.eltdf-ps-info-category,
+			.eltdf-ps-info-tag,
+			.eltdf-ps-info-date {
+				font-size: 11px;
+				color: $first-main-color;
+				letter-spacing: 0.3em;
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+			.eltdf-ps-info-tag {
+				&:after {
+					content:',';
+				}
+			}
+			.eltdf-ps-info-tag:last-child {
+				&:after {
+					content:'';
+				}
+			}
+			
+		}
+		.eltdf-ps-social-share {
+			margin-top: 21px;
+		}
+		
+		.eltdf-ps-info-title {
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 400;
+			margin: 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.eltdf-portfolio-single-holder {
+	
+	.eltdf-ps-image-holder {
+		
+		&.eltdf-grid-masonry-list {
+			
+			.eltdf-ps-image {
+				
+				a {
+					height: 100%;
+				}
+			}
+		}
+	}
+	.eltdf-ps-content-item {
+		p {
+			line-height: 25px;
+			font-size: 16px;
+			margin-top: 17px;
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

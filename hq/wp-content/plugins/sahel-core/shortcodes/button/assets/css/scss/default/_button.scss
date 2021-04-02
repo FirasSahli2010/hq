@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Button shortcode style - begin
+   ========================================================================== */
+
+.eltdf-btn {
+    @include eltdfButtonDefaultStyle();
+    @include eltdfButtonSize();
+    cursor: pointer;
+    
+    &.eltdf-btn-simple {
+        padding: 0 !important;
+        color: #010101;
+        background-color: transparent;
+        border: 0;
+        vertical-align: middle;
+
+        .eltdf-btn-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:not(.eltdf-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $default-heading-color !important;
+        }
+
+        &:not(.eltdf-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: transparent !important;
+        }
+
+        &:not(.eltdf-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: transparent !important;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 33px;
+            top: calc(50% - 1px);
+            left: 80%;
+            background-color: currentColor;
+            @include eltdfTransform(translateX(27px));
+            @include eltdfTransitionTransform(.4s cubic-bezier(0.13, 0.68, 0.05, 0.83));
+        }
+
+        &:hover{
+            &:after{
+                @include eltdfTransform(translateX(0px));
+            }
+        }
+    }
+
+    &.eltdf-btn-solid {
+        @include eltdfButtonSolidColor();
+
+        &:not(.eltdf-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $default-heading-color !important;
+        }
+
+        &:not(.eltdf-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: transparent !important;
+        }
+
+        &:not(.eltdf-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $default-heading-color !important;
+        }
+    }
+
+    &.eltdf-btn-outline {
+	    @include eltdfButtonOutlineColor();
+
+        &:not(.eltdf-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.eltdf-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.eltdf-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+    
+    &.eltdf-btn-small {
+        @include eltdfButtonSize(small);
+    }
+    
+    &.eltdf-btn-large {
+        @include eltdfButtonSize(large);
+    }
+    
+    &.eltdf-btn-huge {
+        @include eltdfButtonSize(huge);
+    }
+
+    &.eltdf-btn-icon {
+
+        > i,
+        > span:not(.eltdf-btn-text) {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 0 0 4px;
+            font-size: 1.142857142857143em;
+            line-height: inherit;
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Button shortcode style - end
+   ========================================================================== */

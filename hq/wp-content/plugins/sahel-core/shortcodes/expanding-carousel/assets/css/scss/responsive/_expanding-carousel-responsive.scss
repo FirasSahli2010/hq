@@ -1,0 +1,31 @@
+/* ==========================================================================
+   expanding Carousel shortcode responsive style - begin
+   ========================================================================== */
+.eltdf-expanding-carousel-holder {
+	.eltdf-esc-item-text-holder-inner {
+		.eltdf-esc-item-title-holder {
+			@include laptop-landscape-mac{
+				height: 24%;
+			}
+
+			@include ipad-landscape{
+				height: 20%;
+			}
+
+			.eltdf-esc-item-title{
+				@include ipad-landscape{
+					font-size: 30px;
+				}
+			}
+		}
+	}
+
+	.eltdf-esc-nav{
+		@include phone-landscape{
+			display: none;
+		}
+	}
+}
+/* ==========================================================================
+   expanding Carousel shortcode responsive style - end
+   ========================================================================== */

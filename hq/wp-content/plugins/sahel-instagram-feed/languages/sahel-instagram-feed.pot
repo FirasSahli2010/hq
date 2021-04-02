@@ -1,0 +1,168 @@
+# Copyright (C) 2020 Elated Themes
+# This file is distributed under the same license as the Sahel Instagram Feed plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sahel Instagram Feed 2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sahel-instagram-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-09-25T16:50:40+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.1.0\n"
+"X-Domain: sahel-instagram-feed\n"
+
+#. Plugin Name of the plugin
+msgid "Sahel Instagram Feed"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds Instagram feed functionality to our theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Elated Themes"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:29
+msgid "Elated Instagram List"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:31
+msgid "by SAHEL"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:38
+#: widgets/sahel-instagram-widget.php:41
+msgid "Number of Columns"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:40
+msgid "Default"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:41
+#: widgets/sahel-instagram-widget.php:43
+msgid "One"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:42
+#: widgets/sahel-instagram-widget.php:44
+msgid "Two"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:43
+#: widgets/sahel-instagram-widget.php:45
+msgid "Three"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:44
+#: widgets/sahel-instagram-widget.php:46
+msgid "Four"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:45
+msgid "Five"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:52
+#: widgets/sahel-instagram-widget.php:32
+msgid "Type"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:54
+#: widgets/sahel-instagram-widget.php:34
+msgid "Gallery"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:55
+#: widgets/sahel-instagram-widget.php:35
+msgid "Carousel"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:61
+#: widgets/sahel-instagram-widget.php:59
+msgid "Space Between Items"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:67
+#: widgets/sahel-instagram-widget.php:54
+msgid "Number of Photos"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:72
+#: widgets/sahel-instagram-widget.php:71
+msgid "Images Cache Time"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:80
+#: widgets/sahel-instagram-widget.php:65
+msgid "Show Instagram Icon"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:86
+msgid "Enable Slider Loop"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:89
+#: shortcodes/instagram-list/instagram-list.php:97
+#: shortcodes/instagram-list/instagram-list.php:104
+#: shortcodes/instagram-list/instagram-list.php:111
+#: shortcodes/instagram-list/instagram-list.php:119
+#: shortcodes/instagram-list/instagram-list.php:127
+msgid "Slider Settings"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:94
+msgid "Enable Slider Autoplay"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:102
+msgid "Slide Duration"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:103
+msgid "Default value is 5000 (ms)"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:109
+msgid "Slide Animation Duration"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:110
+msgid "Speed of slide animation in milliseconds. Default value is 600."
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:116
+msgid "Enable Slider Navigation Arrows"
+msgstr ""
+
+#: shortcodes/instagram-list/instagram-list.php:124
+msgid "Enable Slider Pagination"
+msgstr ""
+
+#: shortcodes/instagram-list/templates/holder.php:18
+msgid "It seams that you haven't connected with your Instagram account"
+msgstr ""
+
+#: widgets/sahel-instagram-widget.php:13
+msgid "Sahel Instagram Widget"
+msgstr ""
+
+#: widgets/sahel-instagram-widget.php:15
+msgid "Display your Instagram feed"
+msgstr ""
+
+#: widgets/sahel-instagram-widget.php:27
+msgid "Title"
+msgstr ""
+
+#: widgets/sahel-instagram-widget.php:47
+msgid "Six"
+msgstr ""
+
+#: widgets/sahel-instagram-widget.php:48
+msgid "Nine"
+msgstr ""

@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Portfolio Item Layout - Standard Blur style - begin
+   ========================================================================== */
+
+.eltdf-portfolio-list-holder {
+	
+	&.eltdf-pl-standard-blur {
+		
+		article {
+			.eltdf-pli-image {
+				overflow: hidden;
+			}
+			
+			.eltdf-pli-link {
+				z-index: 2;
+			}
+			
+			.eltdf-pli-text-holder {
+				margin: 23px 0 0;
+			}
+
+			.eltdf-pli-title span {
+				@include eltdfUnderline($speed: .4s);
+			}
+
+			&:hover {
+				.eltdf-pli-title span {
+					background-size: 100% 100%;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Standard Shader style - end
+   ========================================================================== */

@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Interactive link showcase shortcode style - begin
+   ========================================================================== */
+
+.eltdf-sig-holder {
+	position:relative;
+	margin: -10px -10px 0 -10px;
+    padding: 0 10px;
+    overflow: hidden;
+
+	.eltdf-sig-info {
+		float: left;
+    	width: 50%;
+	}
+
+	.eltdf-sig-image-holder {
+	    position: absolute;
+	    bottom: 4%;
+	    right: 64px;
+	    width: 45%;
+	    background-color:#fff;
+
+    	.owl-stage-outer {
+
+    		position: relative;
+   			overflow: hidden;
+
+			.owl-stage {
+				position:relative;
+				clear:both;
+
+				.owl-item {
+					position:relative;
+					min-height: 1px;
+		    		float: left;
+
+		    		img {
+		    			display:block;
+		    			margin:0;
+		    			width:100%;
+		    		}
+				}
+			}
+
+		}
+	}
+
+	.eltdf-sig-info {
+		padding: 0 8% 0 0;
+
+		.eltdf-sig-headline {
+			margin: 0 0 40px;
+			width: 75%;
+
+			h1{
+				margin: 20px 0 14px;
+			}
+		}
+
+		.eltdf-sig-description {
+			color: #676767;
+			font-size: 18px;
+			margin-top: 10px;
+			line-height: 29px;
+		}
+
+		.eltdf-sig-thumbnails-holder {
+			margin: 0 -3.25%;
+    		padding: 0 10.7% 0 0;
+
+			.eltdf-sig-thumbnail {
+				float: left;
+				width: 34%;
+				margin: 0 2.5%;
+				box-sizing: border-box;
+   				margin-bottom: 4.5%;
+				cursor:pointer;
+
+				.eltdf-sig-inner {
+					position: relative;
+					display: inline-block;
+
+					&:after {
+						content: '';
+						@include eltdfAbsoluteHolderLayout;	
+						background-color: rgba(#e0d7d0, .13);
+						opacity: 0;
+						@include eltdfTransition(opacity .4s cubic-bezier(0.215, 0.61, 0.355, 1));
+					}
+				}
+
+				&:hover .eltdf-sig-inner:after,
+				&.active .eltdf-sig-inner:after {
+					opacity:1;
+				}
+
+				img {
+					display: block;
+				}
+			}
+
+		}
+	}
+
+	.owl-nav {
+		&.disabled {
+			display:none;
+		}
+	}
+}
+/* ==========================================================================
+   Interactive link showcase shortcode style - end
+   ========================================================================== */

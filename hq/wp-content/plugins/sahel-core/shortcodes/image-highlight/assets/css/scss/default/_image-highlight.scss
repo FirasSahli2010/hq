@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Image Highlight shortcode style - begin
+   ========================================================================== */
+
+.eltdf-image-highlight-holder {
+    @include eltdfRelativeHolderLayout();
+	padding:  0 0 0 52px;
+	
+	.eltdf-ih-image {
+		@include eltdfRelativeHolderLayout();
+
+		a {
+			@include eltdfAbsoluteHolderLayout();
+			z-index: 10;
+		}
+
+		img {
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+	}
+	
+	.eltdf-ih-text-holder {
+		@include eltdfRelativeHolderLayout();
+	}
+
+	.eltdf-ih-side-text-holder {
+		position: absolute;
+		left: 0;
+		bottom: 56px;
+		display: inline-block;
+
+		@include eltdfTransform(rotate(-90deg));
+		@include eltdfTransformOrigin(0 0);
+
+		.eltdf-ih-side-text {
+			display: inline-block;
+			vertical-align: middle;
+			color: #010101;
+			font-family: inherit;
+			font-size: 11px;
+			line-height: 2.7em;
+			letter-spacing: .3em;
+			font-weight: 400;
+			text-transform: uppercase;
+
+			&:after{
+				content: "";
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				left: 7px;
+				bottom: 1px;
+				background-color: currentColor;
+				height: 1px;
+				width: 33px;
+			}
+		}
+	}
+
+	.eltdf-ih-title {
+		margin: 2px 0 0;
+	}
+
+	.eltdf-ih-subtitle{
+		margin: 25px 0 0;
+	}
+
+	span.eltdf-ih-title{
+		display: block;
+		color: $default-heading-color;
+		font-size: 11px;
+		font-weight: 400;
+		letter-spacing: 0.3em;
+		margin: 27px 0 0;
+		text-align: center;
+	}
+	
+	.eltdf-ih-text {
+		margin: 14px 0 0;
+	}
+
+	&.eltdf-ih-with-link {
+		.eltdf-ih-title > a {
+			@include eltdfUnderline;
+		}
+
+		.eltdf-ih-image:hover ~ .eltdf-ih-text-holder .eltdf-ih-title > a{
+			background-size: 100% 100%;
+		}
+	}
+
+	&.eltdf-ih-with-animation {
+		visibility: hidden;
+
+		.touch & {
+			visibility: visible;
+		}
+
+		.no-touch & {
+			visibility: visible;
+			opacity: 0;
+			@include eltdfTransform(translateY(10px));
+			
+			&.eltdf-appeared {
+				opacity: 1;
+				@include eltdfTransform(translateY(0));
+				@include eltdfTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Image Highlight shortcode style - end
+   ========================================================================== */

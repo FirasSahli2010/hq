@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.eltdf-ps-related-posts-holder {
+	@include eltdfRelativeHolderLayout();
+	margin: 58px 0 0;
+	clear: both;
+
+	.eltdf-ps-related-title {
+        margin: 0 0 27px;
+        text-align: center;
+    }
+	
+	.eltdf-ps-related-posts {
+		margin: 0 -15px;
+	}
+	
+	.eltdf-ps-related-post {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 25%;
+		float: left;
+		padding: 0 15px;
+		margin: 0 0 30px;
+		box-sizing: border-box;
+		
+		@include ipad-landscape {
+			width: 50%;
+			
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+		}
+		
+		@include phone-landscape {
+			width: 100%;
+		}
+		.eltdf-ps-related-overlay {
+			@include eltdfAbsoluteHolderLayout();
+			z-index: 1;
+			opacity: 0;
+			@include eltdfTransform(translateZ(0));
+			@include eltdfTransition(opacity .3s);
+			background-color: rgba(0,0,0,0.09);
+
+			.eltdf-ps-related-outer {
+				@include eltdfTableLayout();
+
+				.eltdf-ps-related-text {
+					position: relative;
+					display: table-cell;
+					height: 100%;
+					width: 100%;
+					padding: 20px 36px 33px;
+					vertical-align: middle;
+					text-align: center;
+					@include eltdfTransitionTransform(.2s ease);
+
+					.eltdf-ps-related-title {
+						margin: 8px 0 0;
+
+					}
+
+					.eltdf-ps-related-categories a {
+						    display: inline-block;
+						letter-spacing: 0.3em;
+						text-transform: uppercase;
+						font-size: 11px;
+					}
+
+					.eltdf-ps-related-title a,
+					.eltdf-ps-related-categories a {
+
+						color: $default-background-color;
+
+						&:hover {
+							color: $default-background-color !important;
+						} 
+
+					}
+			
+				}
+
+			}
+
+		}
+
+		&:hover {
+			
+			.eltdf-ps-related-overlay {
+				opacity: 1;
+			}
+
+			.eltdf-ps-related-text {
+				@include eltdfTransitionTransform(.45s cubic-bezier(0.64, 0.01, 0.15, 1.16), opacity .5s);
+				@include eltdfTransform(translate3d(0,0,0));
+
+			}
+			img {
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(5px);
+				-o-filter: blur(5px);
+				-ms-filter: blur(5px);
+	      		filter: blur(5px);
+	      		@include eltdfTransitionTransform( 0.3s ease-in-out);
+
+			}
+		}
+	}
+	
+	.eltdf-ps-related-image {
+		@include eltdfRelativeHolderLayout();
+		overflow: hidden;
+
+		
+		a, img {
+			display: block;
+			@include eltdfTransitionTransform( 0.3s ease-in-out);
+
+		}
+		
+	}
+	
+	
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

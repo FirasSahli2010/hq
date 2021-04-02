@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Horizontaly Scrolling Portfolio List shortcode style - begin
+   ========================================================================== */
+.eltdf-horizontaly-scrolling-portfolio-holder-outer {
+	@include laptop-landscape-large {
+		article {
+			margin-right: 60px;
+		}
+	}
+
+	@include ipad-landscape {
+		.eltdf-hspl-item-inner {
+			margin: 0 !important;
+		}
+
+		.eltdf-hspl-lines-holder .eltdf-lines-col{
+		
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i}) {
+					left: ($i - 1)*33%;
+				}
+			}
+		}
+	}
+
+	/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+	/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+	/* ----------- iPhone X ----------- */
+	@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2),
+	only screen 
+	and (min-device-width: 414px) 
+	and (max-device-width: 736px) 
+	and (-webkit-min-device-pixel-ratio: 3),
+	only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 812px) 
+	and (-webkit-min-device-pixel-ratio: 3),
+	only screen and (max-device-width: 600px) {
+		padding: 0 20px;
+
+		.eltdf-hspl-item-inner {
+			height: auto;
+			width: 100%;
+		}
+
+		article {
+			opacity: 1;
+			margin-right: 0;
+
+			&.eltdf-hspl-featured {
+				.eltdf-hspl-item-holder-inner {
+					width: 100%;
+					text-align: center;
+				}
+
+				img {
+					margin: auto;
+				}
+
+				.eltdf-hspli-text {
+					padding: 22px 0;
+				}
+			}
+
+			&:not(.eltdf-hspl-featured) {
+				width: calc(100% - 50px);
+				margin-left: 50px;
+				margin-bottom: 40px;
+			}
+		}
+
+		.eltdf-hspl-lines-holder {
+			display: none;
+		}
+
+		.eltdf-hspl-inner {
+			visibility: visible;
+			display: block;
+			height: auto;
+		}
+	}
+}
+/* ==========================================================================
+   Horizontaly Scrolling Portfolio List shortcode style - end
+   ========================================================================== */

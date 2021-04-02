@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Team shortcode style - begin
+   ========================================================================== */
+
+.eltdf-team-holder {
+    @include eltdfRelativeHolderLayout();
+    overflow: hidden;
+	
+	&.eltdf-team-info-on-image,
+	&.eltdf-team-info-below-image {
+		.touch & {
+			cursor: pointer;
+		}
+
+		.eltdf-team-social-holder {
+			margin: 7px 0 0;
+		}
+		
+		.eltdf-team-icon {
+			opacity: 0;
+			@include eltdfTransition(opacity .3s);
+
+			@for $i from 1 to 10 {
+				&:nth-child(#{$i}) { 
+					-webkit-transition-delay: $i * 0.05s; 
+					transition-delay: $i * 0.05s; 
+				}
+			}
+		}
+		
+
+		&:hover {
+			.eltdf-team-icon {
+				opacity: 1;
+			}
+		}
+	}
+	&.eltdf-team-info-on-image {
+		.eltdf-team-name,
+		.eltdf-team-position,
+		.eltdf-team-text {
+
+			color: #fff;
+
+		}
+	}
+
+    .eltdf-team-image {
+        @include eltdfRelativeHolderLayout();
+
+        img {
+            display: block;
+        }
+    }
+	
+	.eltdf-team-info {
+		@include eltdfRelativeHolderLayout();
+		margin: 20px 0 0;
+		text-align: center;
+	}
+
+    .eltdf-team-name {
+		margin: 0;
+		display: inline;
+		@include eltdfUnderline($speed: .3s);
+	}
+	
+	.eltdf-team-image:hover ~ .eltdf-team-info .eltdf-team-name {
+		background-size: 100% 100%;
+	}
+	
+
+    .eltdf-team-position {
+        margin: 6px 0 3px;
+    }
+	
+	.eltdf-team-text {
+		margin: 6px 0 25px;
+	}
+	
+	.eltdf-team-social-wrapper {
+		@include eltdfAbsoluteHolderLayout();
+		z-index: 1;
+	}
+	
+	.eltdf-team-social-outer {
+		@include eltdfTableLayout();
+	}
+	
+	.eltdf-team-social-inner {
+		position: relative;
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		padding: 20px 36px 25px;
+		vertical-align: bottom;
+	}
+	
+	.eltdf-team-social-holder {
+		@include eltdfRelativeHolderLayout();
+		margin: 17px 0 0;
+		
+		.eltdf-team-icon {
+			font-size: 14px;
+			margin: 0 12px 13px 0;
+			display: block;
+			
+			.eltdf-icon-element {
+				color: #fff;
+				font-size: 16px;
+				@include eltdfTransition(color .2s ease-out);
+
+				&:hover{
+					color: #7c7c7c;
+				}
+			}
+		}
+	}
+
+	&.eltdf-team-with-loading-animation {
+		visibility: hidden;
+
+		.touch & {
+			visibility: visible;
+		}
+	
+		.no-touch & {
+			visibility: visible;
+			opacity: 0;
+			@include eltdfTransform(translateY(10px));
+			
+			&.eltdf-appeared {
+				opacity: 1;
+				@include eltdfTransform(translateY(0));
+				@include eltdfTransition(opacity .8s cubic-bezier(0.34, 0.52, 0.57, 1.04), transform .8s cubic-bezier(0.34, 0.52, 0.57, 1.04));
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Team shortcode style - end
+   ========================================================================== */

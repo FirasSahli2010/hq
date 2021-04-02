@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.eltdf-ps-navigation {
+	position: relative;
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	padding: 0;
+	margin: 56px 0 0;
+	clear: both;
+    box-sizing: border-box;
+
+    .eltdf-ps-full-width-custom-layout & {
+        padding: 0 40px;
+    }
+	
+	.eltdf-ps-back-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		@include eltdfTransform(translateX(-50%) translateY(-50%));
+		
+		a {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			cursor: pointer;
+			font-size: 23px;
+			line-height: 1;
+			
+			span {
+				display: block;
+				line-height: inherit;
+				
+				&:before,
+				&:after {
+					display: block;
+					line-height: 14px;
+				}
+				
+				&:after {
+					content: "\e0a6";
+				}
+			}
+		}
+	}
+	
+	.eltdf-ps-prev,
+	.eltdf-ps-next {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		width: 49%;
+		padding: 0;
+		box-sizing: border-box;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+
+			font-family: $default-text-font;
+			font-size: 11px;
+			line-height: 2.8em;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
+			line-height: 15px;
+			
+			.eltdf-ps-nav-mark {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+	
+	.eltdf-ps-prev {
+		
+		a {
+			
+			.eltdf-ps-nav-mark {
+				left: 0;
+			}
+				&:after{
+					content: '';
+					position: absolute;
+					top: calc(50% - 1px);
+					left: calc(100% + 4px);
+					width: 32px;
+					height: 1px;
+					background-color: currentColor;
+					opacity: 0;
+
+					@include eltdfTransition(left .4s ease);
+				}
+
+				&:hover{
+					&:after{
+						opacity: 1;
+						left: calc(100% - 12px);
+					}
+				}
+		}
+	}
+	
+	.eltdf-ps-next {
+		text-align: right;
+		
+		a {
+			
+			.eltdf-ps-nav-mark {
+				right: 0;
+			}
+
+			&:after{
+				content: '';
+				position: absolute;
+				top: calc(50% - 1px);
+				left: calc(100% + 4px);
+				width: 32px;
+				height: 1px;
+				background-color: currentColor;
+				opacity: 0;
+
+				@include eltdfTransition(left .4s ease);
+			}
+
+			&:hover{
+				&:after{
+					opacity: 1;
+					left: calc(100% - 12px);
+				}
+			}
+		}
+	}
+
+	&.eltdf-ps-navigation-floated{
+		.eltdf-ps-prev,
+		.eltdf-ps-next{
+			position: fixed;
+			top: 50%;
+			width: 99px;
+			z-index: 10000;
+
+			@include eltdfTransformOrigin(center);
+			@include eltdfTransform(rotate(-90deg));
+
+			a{
+				white-space: nowrap;
+				opacity: 0;
+				visibility: hidden;
+
+				&.off{
+					opacity: 0;
+					visibility: hidden;
+
+					@include eltdfTransition(opacity .15s ease,visibility 0s .15s);
+				}
+
+				&.on{
+					opacity: 1;
+					visibility: visible;
+
+					@include eltdfTransition(opacity .3s ease);
+				}
+			}
+
+		}
+
+		.eltdf-ps-prev{
+			left: 0;
+
+			@include phone-landscape{
+				left: -30px;
+			}
+			@include smaller-phone-portrait{
+				left: -43px;
+			}
+		}
+
+		.eltdf-ps-next{
+			right: 0;
+
+			@include phone-landscape{
+				right: -30px;
+			}
+
+			@include smaller-phone-portrait{
+				right: -43px;
+			}
+
+		}
+	}
+
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

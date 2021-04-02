@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+.widget.eltdf-featured-projects-widget{
+
+	.eltdf-featured-project-opener{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		@include eltdfTransition(color .2s ease);
+
+		&.eltdf-fpo-button-opener-icon-pack {
+
+			.eltdf-fpo-icon {
+				font-size: 20px;
+
+				* {
+					display: block;
+					line-height: inherit;
+
+					&:before {
+						display: block;
+						line-height: inherit;
+					}
+				}
+			}
+		}
+
+		&.eltdf-fpo-button-opener-svg-path {
+
+			.eltdf-fpo-icon {
+
+				> * {
+					vertical-align: middle;
+				}
+
+				> *,
+				path {
+					fill: currentColor;
+					stroke: currentColor;
+				}
+			}
+		}
+
+		&.eltdf-fpo-button-opener-predefined {
+			line-height: 1;
+
+			.eltdf-hm-lines {
+				position: relative;
+				display: block;
+				width: 40px;
+				height: 11px;
+				color: $first-main-color;
+
+				.eltdf-hm-line {
+					position: absolute;
+					height: 1px;
+					width: 33px;
+					background-color: currentColor;
+					@include eltdfTransition(all .2s ease);
+
+					&.eltdf-line-1 {
+						top: 0;
+						left: -7px;
+					}
+
+					&.eltdf-line-2 {
+						bottom: 0;
+						right: -5px;
+					}
+				}
+
+				&:hover {
+					.eltdf-hm-line {
+						&.eltdf-line-1 {
+							@include eltdfTransform(translate(14px));
+						}
+
+						&.eltdf-line-2 {
+							@include eltdfTransform(translate(-14px));
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.eltdf-featured-project-holder{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(28,28,28,.95);
+		overflow-x: hidden !important;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 105;
+
+		.eltdf-featured-project-close{
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			color: #fff;
+			font-size: 24px;
+			cursor: pointer;
+			@include eltdfTransition(color .2s ease);
+			z-index: 10;
+
+			&:hover{
+				color: #7c7c7c;
+			}
+		}
+
+		.eltdf-fp-holder-table{
+			@include eltdfTableLayout();
+		}
+
+		.eltdf-fp-holder-table-cell{
+			@include eltdfTableCellLayout();
+			text-align: left;
+			padding: 0 110px;
+		}
+
+		.eltdf-portfolio-list-holder article{
+			.eltdf-pli-text {
+				.eltdf-pli-title span,
+				.eltdf-pli-category-holder a{
+					color: #fff !important;
+					&:hover{
+						color: #FFF!important;
+					}
+				}
+			}
+		}
+
+		&.eltdf-fpw-skin-light{
+			background-color: rgba(255,255,255,.95);
+
+			.eltdf-featured-project-close{
+				color: #000;
+			}
+
+			.eltdf-portfolio-list-holder article{
+				.eltdf-pli-text {
+					.eltdf-pli-title span,
+					.eltdf-pli-category-holder a{
+						color: #000 !important;
+					}
+				}
+			}
+
+			.eltdf-light-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header) .eltdf-menu-area & .eltdf-featured-project-close,
+			.eltdf-light-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header).eltdf-menu-area & .eltdf-featured-project-close,
+			.eltdf-light-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header) .eltdf-menu-area & .eltdf-featured-project-close span,
+			.eltdf-light-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header).eltdf-menu-area & .eltdf-featured-project-close span{
+				color: #000 !important;
+			}
+		}
+
+		&.eltdf-fpw-skin-dark{
+
+			.eltdf-dark-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header) .eltdf-menu-area & .eltdf-featured-project-close,
+			.eltdf-dark-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header).eltdf-menu-area & .eltdf-featured-project-close{
+				color: #fff !important;
+
+				&:hover{
+					color: #7c7c7c !important;
+				}
+			}
+			.eltdf-dark-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header) .eltdf-menu-area & .eltdf-featured-project-close span,
+			.eltdf-dark-header .eltdf-page-header>div:not(.fixed):not(.eltdf-sticky-header).eltdf-menu-area & .eltdf-featured-project-close span{
+				color: inherit !important;
+			}
+		}
+	}
+
+	&.eltdf-opened{
+		.eltdf-featured-project-holder{
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
+
+
+		&.eltdf-fp-fade-in .eltdf-featured-project-holder {
+			-webkit-animation: fade_in .25s linear both;
+			-moz-animation: fade_in .25s linear both;
+			animation: fade_in .25s linear both;
+		}
+	}
+
+
+	&.eltdf-fp-fade-out .eltdf-featured-project-holder {
+		-webkit-animation: fade_out .25s linear both;
+		-moz-animation: fade_out .25s linear both;
+		animation: fade_out .25s linear both;
+	}
+}
+
+
+
+.eltdf-fp-opened {
+
+    .eltdf-page-header,
+    .eltdf-top-bar {
+        visibility: hidden;
+    }
+
+    .eltdf-featured-projects-widget,
+    .eltdf-logo-wrapper,
+    .eltdf-logo-wrapper-outer {
+        visibility: visible;
+    }
+
+    .eltdf-fullscreen-menu-holder-outer {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+	.eltdf-logo-wrapper-outer{
+		border-color: transparent !important;
+	}
+
+	.eltdf-logo-wrapper a {
+		img.eltdf-light-logo {
+            opacity: 1 !important;
+        }
+        img.eltdf-dark-logo{
+			opacity: 0;
+		}
+
+		img.eltdf-normal-logo {
+			opacity: 0;
+		}
+	}
+}
+
+@-webkit-keyframes fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden
+	}
+}
+
+@-moz-keyframes fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden
+	}
+}
+
+@keyframes fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden
+	}
+}
+
+@-webkit-keyframes fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden
+	}
+	100% {
+		opacity: 1;
+		visibility: visible
+	}
+}
+
+@-moz-keyframes fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden
+	}
+	100% {
+		opacity: 1;
+		visibility: visible
+	}
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden
+	}
+	100% {
+		opacity: 1;
+		visibility: visible
+	}
+}
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

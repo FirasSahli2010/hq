@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Blog responsive styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   Blog List - Centered responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .eltdf-blog-holder.eltdf-blog-centered article .eltdf-post-info-bottom {
+    margin-top: 0;
+    padding: 0;
+  }
+  .eltdf-blog-holder.eltdf-blog-centered article .eltdf-info-bottom-item {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center !important;
+  }
+}
+
+/* ==========================================================================
+   Blog List - Centered responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .eltdf-author-description .eltdf-author-description-image {
+    width: 32%;
+  }
+  .eltdf-author-description .eltdf-author-description-text-holder {
+    padding: 0 35px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltdf-author-description .eltdf-author-description-content {
+    padding: 0;
+  }
+  .eltdf-author-description .eltdf-author-description-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .eltdf-author-description .eltdf-author-description-image img {
+    display: inline-block;
+  }
+  .eltdf-author-description .eltdf-author-description-text-holder {
+    display: inline-block;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .eltdf-related-posts-holder .eltdf-related-post {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltdf-related-posts-holder .eltdf-related-post {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltdf-blog-holder.eltdf-blog-single article .eltdf-post-info-bottom .eltdf-post-info-bottom-left,
+  .eltdf-blog-holder.eltdf-blog-single article .eltdf-post-info-bottom .eltdf-post-info-bottom-right {
+    width: 100%;
+    float: none;
+  }
+  .eltdf-blog-holder.eltdf-blog-single article .eltdf-post-info-bottom .eltdf-post-info-bottom-right {
+    text-align: inherit;
+    margin: 10px 0 0;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .eltdf-blog-slider-holder.eltdf-bs-carousel-centered .active.center .eltdf-item-text-wrapper {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltdf-blog-slider-holder .eltdf-item-text-wrapper .eltdf-post-title {
+    font-size: 35px;
+  }
+  .eltdf-blog-slider-holder .eltdf-item-info-section {
+    margin: 25px 0 0;
+  }
+  .eltdf-blog-slider-holder .eltdf-owl-slider .owl-dots {
+    bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltdf-blog-slider-holder .eltdf-item-text-wrapper .eltdf-post-title {
+    font-size: 25px;
+  }
+  .eltdf-blog-slider-holder .eltdf-item-info-section {
+    margin: 10px 0 0;
+  }
+  .eltdf-blog-slider-holder .eltdf-owl-slider .owl-dots {
+    bottom: 15px;
+  }
+  .eltdf-blog-slider-holder .eltdf-owl-slider .owl-item img {
+    min-height: 200px;
+  }
+  .eltdf-blog-slider-holder .eltdf-post-title {
+    margin: 10px 0 0;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Blog responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=blog-map-responsive.css.map */

@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.eltdf-pricing-tables {
+    @include eltdfRelativeHolderLayout();
+    &:before {
+        content: "";
+        height: 50%;
+        display: block;
+        border-left: 1px solid #000;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      
+    }
+    &:after {
+        content: "";
+        height: 50%;
+        display: block;
+        border-right: 1px solid #000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      
+    }
+    &.eltdf-border-light {
+
+        &:before {
+           
+            border-left: 1px solid #fff;
+          
+        }
+        &:after {
+           
+            border-right: 1px solid #fff;
+            
+        }
+
+    }
+    &.eltdf-huge-space {
+         &:before {
+            bottom: 13%;
+         } 
+    }
+    &.eltdf-large-space {
+         &:before {
+            bottom: 8%;
+         } 
+    }
+    &.eltdf-medium-space {
+         &:before {
+            bottom: 7%;
+         } 
+    }
+    &.eltdf-normal-space {
+         &:before {
+            bottom: 5%;
+         }
+    }
+    &.eltdf-small-space {
+         &:before {
+            bottom: 3%;
+         }
+    }
+    &.eltdf-tiny-space {
+         &:before {
+            bottom: 2%;
+         } 
+    }
+}
+
+.eltdf-price-table {
+
+    &.eltdf-pt-active-item {
+        .eltdf-pt-inner {
+
+            background-color: #f1ebe7 ;
+
+        }
+    }
+
+    .eltdf-pt-inner {
+        @include eltdfRelativeHolderLayout();
+        
+
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 6px 30px;
+                text-align: center;
+
+                &.eltdf-pt-title-holder {
+                    position: relative;
+                    color: $default-heading-color;
+                    font-family: $default-heading-font;
+                    font-size: 30px;
+                    line-height: 24px;
+	                letter-spacing: -0.01em;
+	                
+                    .eltdf-pt-title {
+                        display: block;
+	                    padding: 59px 0 30px;
+	                    box-sizing: border-box;
+                    }
+                }
+
+                &.eltdf-pt-prices {
+                    position: relative;
+					padding: 0px 15px 0;
+	                
+                    .eltdf-pt-value {
+                        position: relative;
+                        vertical-align: super;
+                        bottom: -15px;
+                        font-family: $default-heading-font;
+                        font-size: 30px;
+                        line-height: 1em;
+                        margin: 0 8px 0 0;
+                        color: $default-heading-color;
+                    }
+
+                    .eltdf-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+	                    left: -5px;
+                        font-family: $default-heading-font;
+                        font-size: 50px;
+                        line-height: 1em;
+                        letter-spacing: 9.3px;
+                        font-weight: 300;
+                        color: $default-heading-color;
+                    }
+
+                    .eltdf-pt-mark {
+                        position: relative;
+                        display: block;
+	                    margin: 19px 0 0;
+                        font-family: $default-text-font;
+                        font-size: 18px;
+                        text-transform: capitalize;
+                        letter-spacing: 0;
+                    }
+                }
+
+                &.eltdf-pt-content {
+	                padding: 24px 15px;
+                }
+
+                &.eltdf-pt-button {
+                    padding: 28px 15px 70px;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */
+
+/* ==========================================================================
+    Pricing Tables responsive style - start
+    ========================================================================== */
+
+@include ipad-landscape {
+    .eltdf-pricing-tables {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+}
+
+/* ==========================================================================
+   Pricing Tables responsive style - end
+   ========================================================================== */
